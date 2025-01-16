@@ -706,6 +706,7 @@
     }
 
     .ftupper {
+        font-size: 0.5rem;
         display: flex;
         justify-content: space-evenly;
     }
