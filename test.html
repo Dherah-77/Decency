@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling with Seven Pauses</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden; /* Prevents scrollbars from appearing */
+      }
+      .scrolling-object {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 100%; /* Start off the page to the right */
+        transform: translateY(-50%);
+        font-size: 2rem;
+        white-space: nowrap;
+        animation: scroll-seven-pauses 20s linear infinite;
+      }
+
+      @keyframes scroll-seven-pauses {
+        0% {
+          left: 100%; /* Start off-screen right */
+        }
+        10% {
+          left: 85%; /* First pause point */
+        }
+        15% {
+          left: 85%; /* Pause for a moment */
+        }
+        25% {
+          left: 70%; /* Second pause point */
+        }
+        30% {
+          left: 70%; /* Pause for a moment */
+        }
+        40% {
+          left: 55%; /* Third pause point */
+        }
+        45% {
+          left: 55%; /* Pause for a moment */
+        }
+        55% {
+          left: 40%; /* Fourth pause point */
+        }
+        60% {
+          left: 40%; /* Pause for a moment */
+        }
+        70% {
+          left: 25%; /* Fifth pause point */
+        }
+        75% {
+          left: 25%; /* Pause for a moment */
+        }
+        85% {
+          left: 10%; /* Sixth pause point */
+        }
+        90% {
+          left: 10%; /* Pause for a moment */
+        }
+        100% {
+          left: -100%; /* Move off-screen left */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrolling-object">This text scrolls with seven pauses!</div>
+  </body>
+</html>
