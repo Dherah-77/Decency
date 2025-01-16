@@ -1,17 +1,26 @@
 const price = document.querySelector(".pop-up");
 
-const scrollTreshold = 900;
+let scrollTreshold = 900; // Use `let` to allow reassignment
 
-window.addEventListener("scroll", () => {
-    if(window.scrollY > scrollTreshold) {
+// Define the media query
+const mediaQuery = window.matchMedia("(max-width: 480px)");
+
+// Update the scroll threshold based on the media query
+if (mediaQuery.matches) {
+    scrollTreshold = 5;
+}
+
+// Function to handle scroll behavior
+function handleScroll() {
+    if (window.scrollY > scrollTreshold) {
         price.style.display = "block";
     } else {
         price.style.display = "none";
     }
-})
+}
 
-const cont = document.querySelector(".container2");
-const scroller = document.querySelector(".scroller");
+// Add the scroll event listener
+window.addEventListener("scroll", handleScroll);
 
 // PHONE SIZE DESIGN
 
