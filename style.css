@@ -48,6 +48,69 @@
         justify-content: space-evenly;
     }
 
+    .ourprod {
+        display: flex;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        height: auto;
+        position: absolute;
+        z-index: 10;
+        border-bottom: solid 1px var(--RED-COLOR);
+    }
+
+    .produp {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .ourprod img {
+        height: 600px;
+        width: 400px;
+        border-radius: 20px;
+    }
+
+    .close {
+        align-self: center;
+    }
+
+    .blck2 {
+        background-image: url("BG2.jpeg");
+        background-size: cover;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .about {
+        display: none;
+        background-color: hsla(0, 0%, 0%, 0.651);
+        font-size: 300%;
+        color: var(--YELW-COLOR);
+        z-index: 10;
+    }
+
+    .cont {
+        position:absolute;
+        width: 100vw;
+        background-color: var(--GRN-COLOR);
+        color: var(--RED-COLOR);
+        text-align: center;
+        border-bottom: 1px solid var(--RED-COLOR);
+        font-size: 200%;
+        z-index: 10;
+        display: none;
+    }
+
+    .cont a {
+        color: var(--RED-COLOR);
+    }
+
+    .cont a:hover {
+        color: var(--YELW-COLOR);
+    }
+
     .drpdown { 
         position: absolute;
         background-color: var(--YELW-COLOR);
@@ -154,10 +217,19 @@
         box-shadow: 5px 5px 15px #000;
     }
 
+    button a  {
+        text-decoration: none;
+        color: var(--RED-COLOR)
+    }
+
     button:hover {
         color: var(--GRN-COLOR);
         background-color: var(--RED-COLOR);
         transform: scale(1.1);
+    }
+
+    button a:hover {
+        color: var(--GRN-COLOR);
     }
 
     .pop-up {
@@ -217,7 +289,7 @@
 }
 
 /* Medium Screens (Tablets) */
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 501px) and (max-width: 1023px) {
     :root {
         --BLCK-COLOR: #333;
         --RED-COLOR: hsla(0, 100%, 25%, 0.772);
@@ -257,6 +329,68 @@
     .hdli {
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .ourprod {
+        display: flex;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        height: auto;
+        position: absolute;
+        z-index: 10;
+        border-bottom: solid 1px var(--RED-COLOR);
+    }
+
+    .produp {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .ourprod img {
+        height: 400px;
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    .close {
+        align-self: center;
+    }
+
+    .blck2 {
+        background-image: url("BG2.jpeg");
+        background-size: cover;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .about {
+        display: none;
+        background-color: hsla(0, 0%, 0%, 0.651);
+        font-size: 200%;
+        color: var(--YELW-COLOR);
+    }
+
+    .cont {
+        display: none;
+        position:absolute;
+        width: 100vw;
+        background-color: var(--GRN-COLOR);
+        color: var(--RED-COLOR);
+        text-align: center;
+        border-bottom: 1px solid var(--RED-COLOR);
+        font-size: 200%;
+        z-index: 10;
+    }
+
+    .cont a {
+        color: var(--RED-COLOR);
+    }
+
+    .cont a:hover {
+        color: var(--YELW-COLOR);
     }
 
     .drpdown {
@@ -365,10 +499,19 @@
         box-shadow: 5px 5px 15px #000;
     }
 
+    button a  {
+        text-decoration: none;
+        color: var(--RED-COLOR)
+    }
+
     button:hover {
         color: var(--GRN-COLOR);
         background-color: var(--RED-COLOR);
         transform: scale(1.1);
+    }
+
+    button a:hover {
+        color: var(--GRN-COLOR);
     }
 
     .pop-up {
@@ -438,7 +581,7 @@
 }
 
 /* Small Screens (Mobile) */ 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     :root {
         --BLCK-COLOR: #333;
         --RED-COLOR: hsla(0, 100%, 25%, 0.772);
@@ -563,6 +706,72 @@
         justify-content: space-evenly;
         border-top: solid 1px var(--RED-COLOR);
     }
+
+    .ourprod {
+        display: flex;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        height: auto;
+        position: absolute;
+        z-index: 10;
+        border-bottom: solid 1px var(--RED-COLOR);
+    }
+
+    .produp {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .ourprod img {
+        height: 400px;
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    .ourprod img {
+        height: 230px;
+        width: 150px;
+    }
+
+    .close {
+        align-self: center;
+    }
+
+    .blck2 {
+        background-image: url("BG2.jpeg");
+        background-size: cover;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .about {
+        display: none;
+        background-color: hsla(0, 0%, 0%, 0.651);
+        font-size: 150%;
+        color: var(--YELW-COLOR);
+    }
+
+    .cont {
+        position: absolute;
+        width: 100vw;
+        background-color: var(--GRN-COLOR);
+        color: var(--RED-COLOR);
+        text-align: center;
+        border-bottom: 1px solid var(--RED-COLOR);
+        z-index: 10;
+        display: none;
+    }
+
+    .cont a {
+        color: var(--RED-COLOR);
+    }
+
+    .cont a:hover {
+        color: var(--YELW-COLOR);
+    }
       
     .blck {
         background-image: url("BG.jpg");
@@ -663,11 +872,20 @@
         box-shadow: 5px 5px 15px #000;
     } 
 
-   .button button:hover {
+    .button button a {
+        text-decoration: none;
+        color: var(--RED-COLOR);
+    }
+
+    button a:hover {
+        color:var(--GRN-COLOR);
+    }
+
+    /* button:hover {
         color: var(--GRN-COLOR);
         background-color: var(--RED-COLOR);
         transform: scale(1.1);
-    }
+    } */
 
     .pop-up {
         display: none;
@@ -698,7 +916,6 @@
 
     footer a {
         color: var(--RED-COLOR);
-        font-size: 20px;
     }
 
     footer a:hover {
@@ -718,8 +935,8 @@
     }
 
     footer img {
-        width: 100px;
-        height:auto;
+        width: 60px;
+        height:30px;
     }
 
     @keyframes dropDown {

@@ -1,26 +1,73 @@
+//  BUTTON POP-UP
 const price = document.querySelector(".pop-up");
 
-let scrollTreshold = 900; // Use `let` to allow reassignment
+let scrollTreshold = 900; 
 
-// Define the media query
+
 const mediaQuery = window.matchMedia("(max-width: 480px)");
 
-// Update the scroll threshold based on the media query
 if (mediaQuery.matches) {
     scrollTreshold = 5;
 }
 
-// Function to handle scroll behavior
 function handleScroll() {
     if (window.scrollY > scrollTreshold) {
         price.style.display = "block";
     } else {
         price.style.display = "none";
     }
-}
+};
 
-// Add the scroll event listener
 window.addEventListener("scroll", handleScroll);
+
+// ITEMS DROP-DOWN
+const products = document.querySelectorAll(".products");
+const productItems = document.querySelector(".ourprod");
+const closed = document.querySelector(".close");
+
+products.forEach((product) => {
+  product.addEventListener("click", () => {
+    productItems.style.display = "flex";
+  });
+});
+
+closed.addEventListener("click", () => {
+  productItems.style.display = "none";
+});
+
+
+const aboutts = document.querySelectorAll(".aboutt");
+const about = document.querySelector(".about");
+const close2 = document.querySelector(".abtclose");
+
+aboutts.forEach((aboutt) => {
+  aboutt.addEventListener("click", () => {
+    about.style.display = "block";
+    social.style.display = "none";
+    listBack.style.display = "none";
+  })
+})
+
+close2.addEventListener("click", () => {
+  about.style.display = "none";
+})
+
+
+
+const contact = document.querySelector(".contact");
+const contItem = document.querySelector(".cont");
+const close3 = document.querySelector(".contclose")
+
+contact.addEventListener("click", () => {
+  contItem.style.display = "block";
+  social.style.display = "none";
+  listBack.style.display = "none";
+})
+
+close3.addEventListener("click", () => {
+  contItem.style.display = "none";
+})
+
 
 // PHONE SIZE DESIGN
 
@@ -38,6 +85,3 @@ menu.addEventListener("click", () => {
       social.style.display = "flex";
     }
   });
-
-
-
