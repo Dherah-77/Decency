@@ -983,7 +983,7 @@ figcaption {
     .prices img {
         align-self: center;
         height: auto;
-        width: 200px;
+        width: 180px;
         animation: price linear;
         animation-timeline: view(80% 3%);
     }
@@ -1062,3 +1062,4 @@ figcaption {
         }
     } 
 }
+
