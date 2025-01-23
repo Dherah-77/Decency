@@ -43,14 +43,12 @@ const close2 = document.querySelector(".abtclose");
 aboutts.forEach((aboutt) => {
   aboutt.addEventListener("click", () => {
     about.style.display = "block";
-    social.style.display = "none";
-    listBack.style.display = "none";
-  })
-})
+  });
+});
 
 close2.addEventListener("click", () => {
   about.style.display = "none";
-})
+});
 
 
 
@@ -60,13 +58,24 @@ const close3 = document.querySelector(".contclose")
 
 contact.addEventListener("click", () => {
   contItem.style.display = "block";
-  social.style.display = "none";
-  listBack.style.display = "none";
-})
+});
 
 close3.addEventListener("click", () => {
   contItem.style.display = "none";
+});
+
+const priceDrop = document.querySelector(".prices");
+const priceClose = document.querySelector(".priceclose");
+const popUp = document.querySelector(".pop-up");
+
+popUp.addEventListener("click", () => {
+  priceDrop.style.display = "flex";
 })
+
+priceClose.addEventListener("click", () => {
+  priceDrop.style.display = "none";
+})
+
 
 
 // PHONE SIZE DESIGN
