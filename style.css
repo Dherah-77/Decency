@@ -54,12 +54,25 @@ figcaption {
         justify-content: space-evenly;
     }
 
+    .sidebar {
+        display: none;
+    }
+
+    .showsd {
+        display: none;
+    }
+
+    .closesd {
+        display: none;
+    }
+
     .ourprod {
         display: flex;
         display: none;
         justify-content: center;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         height: auto;
         position: absolute;
         z-index: 10;
@@ -102,7 +115,8 @@ figcaption {
     .cont {
         position:absolute;
         width: 100vw;
-        background-color: var(--GRN-COLOR);
+        background-color: rgba(128, 171, 128, 0.664);
+        backdrop-filter: blur(15px);
         color: var(--RED-COLOR);
         text-align: center;
         border-bottom: 1px solid var(--RED-COLOR);
@@ -250,7 +264,8 @@ figcaption {
     .prices {
         position: absolute;
         top: 70%;
-        background-color: #fff;
+        background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         border: 2px solid var(--RED-COLOR);
         display: flex;
         display: none;
@@ -370,12 +385,25 @@ figcaption {
         justify-content: space-evenly;
     }
 
+    .sidebar {
+        display: none;
+    }
+
+    .showsd {
+        display: none;
+    }
+
+    .closesd {
+        display: none;
+    }
+
     .ourprod {
         display: flex;
         display: none;
         justify-content: center;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         height: auto;
         position: absolute;
         z-index: 10;
@@ -418,7 +446,8 @@ figcaption {
         display: none;
         position:absolute;
         width: 100vw;
-        background-color: var(--GRN-COLOR);
+        background-color: rgba(128, 171, 128, 0.664);
+        backdrop-filter: blur(15px);
         color: var(--RED-COLOR);
         text-align: center;
         border-bottom: 1px solid var(--RED-COLOR);
@@ -565,7 +594,8 @@ figcaption {
     .prices {
         position: absolute;
         top: 130%;
-        background-color: #fff;
+        background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         border: 2px solid var(--RED-COLOR);
         display: flex;
         display: none;
@@ -678,93 +708,39 @@ figcaption {
         text-decoration: none;
     }
 
-    header li {
-        padding: 0.8em;
-        width:100%;
-        text-align: center;
-        border-bottom: solid 1px var(--RED-COLOR);
-        background-color: var(--GRN-COLOR);
-    }
-
-    .menu {
-        position:relative;
-        width: 48px;
-        height: 48px;
-        background-color: transparent;
-        border: none;
-    }
-
-    .icon, .icon::before, .icon::after {
-        width:30px;
-        height: 3px;
-        background-color: #333;
-        border-radius: 5px;
-        position: absolute;
-    }
-
-    .icon::before, .icon::after {
-        content: "";
-    }
-
-    .icon::before {
-        transform: translate(-18px, -8px);
-    }
-
-    .icon::after {
-        transform: translate(-18px, 8px);
-    }
-
-    :is(.menu:hover, .menu:focus-within) .icon {
-        background-color: transparent;
-        transform: rotate(360deg);
-    }
-
-    :is(.menu:hover, .menu:focus-within) .icon::before {
-        transform: translate(-20px) rotate(45deg);
-    }
-
-    :is(.menu:hover, .menu:focus-within) .icon::after {
-        transform: translate(-20px) rotate(-45deg);
-    }
-    
-    :is(ul:hover, ul:focus-within) .icon {
-        background-color: transparent;
-        transform: rotate(360deg);
-    }
-
-    :is(ul:hover, ul:focus-within) .icon::before {
-        transform: translate(-20px) rotate(45deg);
-    }
-
-    :is(ul:hover, ul:focus-within) .icon::after {
-        transform: translate(-20px) rotate(-45deg);
-    }
-    
-    :is(.socials:hover, .socials:focus-within) .icon {
-        background-color: transparent;
-        transform: rotate(360deg);
-    }
-
-    :is(.socials:hover, .socials:focus-within) .icon::before {
-        transform: translate(-20px) rotate(45deg);
-    }
-
-    :is(.socials:hover, .socials:focus-within) .icon::after {
-        transform: translate(-20px) rotate(-45deg);
-    }
-
     .hdli{
+        display: none;
+    }
+
+    .sidebar {
+       position: fixed;
+       right: 0;
+        background-color: rgba(128, 171, 128, 0.664);
+        backdrop-filter: blur(10px);
+        z-index: 20;
+        top: 50px;
+        height: 100vh;
+        width: 300px;
+        list-style-type: none;
         display: flex;
         display: none;
         flex-direction: column;
-        place-content: flex-start;
-        align-items: center;
-        position: absolute;
-        top: 50px;
-        background-color: #fff;
-        width:100%;
-        height: 100%;
-        list-style-type: none;
+    }
+
+    .sidebar li {
+        width: 100%;
+        height: 3.5em;
+        padding-left: 2em;
+    }
+
+    .social {
+        display: flex;
+        padding-left: 2em;
+        justify-content: space-evenly;
+    }
+
+    .closesd {
+        display: none;
     }
 
     .socials {
@@ -783,7 +759,8 @@ figcaption {
         display: flex;
         display: none;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         height: auto;
         position: absolute;
         z-index: 10;
@@ -825,7 +802,8 @@ figcaption {
     .cont {
         position: absolute;
         width: 100vw;
-        background-color: var(--GRN-COLOR);
+        background-color: rgba(128, 171, 128, 0.664);
+        backdrop-filter: blur(15px);
         color: var(--RED-COLOR);
         text-align: center;
         border-bottom: 1px solid var(--RED-COLOR);
@@ -971,7 +949,8 @@ figcaption {
     .prices {
         position: absolute;
         top: 70%;
-        background-color: #fff;
+        background-color: #fff;background-color: #ffffff86;
+        backdrop-filter: blur(10px);
         border: 2px solid var(--RED-COLOR);
         display: flex;
         display: none;

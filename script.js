@@ -52,12 +52,14 @@ close2.addEventListener("click", () => {
 
 
 
-const contact = document.querySelector(".contact");
+const contacts = document.querySelectorAll(".contact");
 const contItem = document.querySelector(".cont");
 const close3 = document.querySelector(".contclose")
 
-contact.addEventListener("click", () => {
-  contItem.style.display = "block";
+contacts.forEach((contact) => {
+  contact.addEventListener("click", () => {
+    contItem.style.display = "block";
+  });
 });
 
 close3.addEventListener("click", () => {
@@ -80,17 +82,24 @@ priceClose.addEventListener("click", () => {
 
 // PHONE SIZE DESIGN
 
-const menu = document.querySelector(".menu");
-const button = document.querySelector(".icon");
-const social = document.querySelector(".socials");
-const listBack = document.querySelector(".hdli");
+const sideBar = document.querySelector(".sidebar");
+const menu = document.querySelector(".showsd");
+const closeSd = document.querySelector(".closesd");
 
 menu.addEventListener("click", () => {
-    if (listBack.style.display === "flex" && social.style.display === "flex") {
-      listBack.style.display = "none";
-      social.style.display = "none";
+    if (sideBar.style.display === "none") {
+        sideBar.style.display = "flex";
+        menu.style.display = "none";
+        closeSd.style.display = "flex";
     } else {
-      listBack.style.display = "flex";
-      social.style.display = "flex";
+        sideBar.style.display = "none";
+        menu.style.display = "flex";
+        closeSd.style.display = "none";
     }
-  });
+});
+
+closeSd.addEventListener("click", () => {
+    sideBar.style.display = "none";
+    menu.style.display = "flex";
+    closeSd.style.display = "none";
+});
