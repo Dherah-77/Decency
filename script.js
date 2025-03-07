@@ -103,3 +103,27 @@ closeSd.addEventListener("click", () => {
     menu.style.display = "flex";
     closeSd.style.display = "none";
 });
+
+  products.forEach((product) => {
+    product.addEventListener("click", () => {
+      sideBar.style.display = "none";
+      menu.style.display = "flex";
+      closeSd.style.display = "none";
+    });
+  });
+  
+  aboutts.forEach((about) => {
+    about.addEventListener("click", () => {
+      sideBar.style.display = "none";
+      menu.style.display = "flex";
+      closeSd.style.display = "none";
+    });
+  });
+  
+  contacts.forEach((contact) => {
+    contact.addEventListener("click", () => {
+      sideBar.style.display = "none";
+      menu.style.display = "flex";
+      closeSd.style.display = "none";
+    });
+  });
