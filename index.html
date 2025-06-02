@@ -3,307 +3,418 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decency</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="icon" href="Logoup.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Decency</title>
+
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <header>
-      <img src="Logo.jpeg" alt="Logo-image" height="50" />
-      <ul class="sidebar">
-        <li><a href="#" class="products">Our Products</a></li>
-        <li><a href="#" class="aboutt">About</a></li>
-        <li><a href="#" class="contact">Contact</a></li>
-        <div class="social">
+  <body class="italic">
+    <!-- HEADER -->
+    <header
+      class="flex justify-between items-center w-full h-16 sticky top-0 z-50 bg-white border-b border-red-800 px-4"
+    >
+      <!-- Logo -->
+      <img src="Logo.jpeg" alt="Logo-image" class="h-12" />
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex space-x-6">
+        <li>
+          <a href="#" class="product-btn text-red-800 hover:text-yellow-400"
+            >Our Products</a
+          >
+        </li>
+        <li>
+          <a href="#" id="about-open" class="text-red-800 hover:text-yellow-400"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="text-red-800 hover:text-yellow-400"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- Desktop Social Links -->
+      <div class="hidden md:flex items-center gap-3">
+        <a
+          href="https://wa.me/+2348063237897"
+          target="_blank"
+          class="text-red-700 hover:text-yellow-400 text-2xl"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/decencyspices"
+          target="_blank"
+          class="text-red-700 hover:text-yellow-400 text-2xl"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/decencyspice"
+          target="_blank"
+          class="text-red-700 hover:text-yellow-400 text-2xl"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://twitter.com/Decency_Spices"
+          target="_blank"
+          class="text-red-700 hover:text-yellow-400 text-2xl"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+      </div>
+
+      <!-- Mobile Menu Buttons -->
+      <div class="md:hidden flex items-center gap-3">
+        <button id="menu-btn">
+          <i class="fas fa-bars fa-2x text-red-800"></i>
+        </button>
+        <button id="menu-cls" class="hidden">
+          <i class="fas fa-xmark fa-2x text-red-800"></i>
+        </button>
+      </div>
+      <!-- MOBILE SIDEBAR -->
+      <ul
+        id="sidebar"
+        class="fixed top-0 left-0 w-2/3 h-full bg-white border-r border-red-800 p-6 flex-col gap-6 text-left hidden z-40"
+      >
+        <li class="product-btn text-red-800 hover:text-yellow-400 py-2">
+          Our Products
+        </li>
+        <li id="about-open" class="text-red-800 hover:text-yellow-400 py-2">
+          About
+        </li>
+        <a href="#contact"
+          ><li class="text-red-800 hover:text-yellow-400 py-2">Contact</li></a
+        >
+        <div class="flex gap-4 pt-4">
           <a
-              href="https://wa.me/+2348063237897"
-              target="_blank"
-              class="text-green-500 text-2xl hover:text-green-700"
-            >
-              <i class="fa-brands fa-whatsapp" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/decencyspices"
-              target="_blank"
-              class="text-pink-500 text-2xl hover:text-pink-700"
-            >
-              <i class="fa-brands fa-instagram" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/decencyspice"
-              target="_blank"
-              class="text-blue-500 text-2xl hover:text-blue-700"
-            >
-              <i class="fa-brands fa-facebook" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://twitter.com/Decency_Spices"
-              target="_blank"
-              class="text-gray-900 text-2xl hover:text-gray-700"
-            >
-              <i class="fa-brands fa-x-twitter" style="font-size: 25px"></i>
-            </a>
+            href="https://wa.me/+2348063237897"
+            target="_blank"
+            class="text-red-700 hover:text-yellow-400 text-2xl"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/decencyspices"
+            target="_blank"
+            class="text-red-700 hover:text-yellow-400 text-2xl"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/decencyspice"
+            target="_blank"
+            class="text-red-700 hover:text-yellow-400 text-2xl"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="https://twitter.com/Decency_Spices"
+            target="_blank"
+            class="text-red-700 hover:text-yellow-400 text-2xl"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
         </div>
       </ul>
-      <a href="#" class="showsd"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-      <a href="#" class="closesd"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
-      <ul class="hdli">
-        <li><a href="#" class="products">Our Products</a></li>
-        <li><a href="#" class="aboutt">About</a></li>
-        <li><a href="#" class="contact">Contact</a></li>
-      </ul>
-      <div class="socials">
-        <a
-              href="https://wa.me/+2348063237897"
-              target="_blank"
-              class="text-green-500 text-2xl hover:text-green-700"
-            >
-              <i class="fa-brands fa-whatsapp" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/decencyspices"
-              target="_blank"
-              class="text-pink-500 text-2xl hover:text-pink-700"
-            >
-              <i class="fa-brands fa-instagram" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/decencyspice"
-              target="_blank"
-              class="text-blue-500 text-2xl hover:text-blue-700"
-            >
-              <i class="fa-brands fa-facebook" style="font-size: 25px"></i>
-            </a>
-            <a
-              href="https://twitter.com/Decency_Spices"
-              target="_blank"
-              class="text-gray-900 text-2xl hover:text-gray-700"
-            >
-              <i class="fa-brands fa-x-twitter" style="font-size: 25px"></i>
-            </a>
-      </div>
     </header>
     <main>
-      <section class="ourprod">
-        <div class="produp">
-          <figure>
-            <img src="Bayleaf.jpeg" alt="Bay-Leaves" />
-            <figcaption>Bay Leaves</figcaption>
+      <!-- OUR PRODUCTS SECTION -->
+      <section
+        id="ourprod"
+        class="hidden fixed top-0 left-0 w-full min-h-screen z-50 bg-white/60 backdrop-blur-md border-2 border-red-800 p-6 flex-col items-center justify-center space-y-6"
+      >
+        <!-- Close Button (top right) -->
+        <button
+          id="prod-close"
+          class="self-end text-red-800 hover:text-yellow-400 text-3xl"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <figure class="flex flex-col items-center">
+            <img
+              src="Bayleaf.jpeg"
+              alt="Bay-Leaves"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Bay Leaves
+            </figcaption>
           </figure>
-          <figure>
-            <img src="Chick-sea.jpeg" alt="Chicken seasoning" />
-            <figcaption>Chicken seasoning</figcaption>
+          <figure class="flex flex-col items-center">
+            <img
+              src="Chick-sea.jpeg"
+              alt="Chicken seasoning"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Chicken seasoning
+            </figcaption>
           </figure>
-          <figure>
-            <img src="Shallot.jpeg" alt="Shallot" />
-            <figcaption>Shallot</figcaption>
+          <figure class="flex flex-col items-center">
+            <img
+              src="Shallot.jpeg"
+              alt="Shallot"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Shallot
+            </figcaption>
           </figure>
-          <figure>
-            <img src="Onion.jpeg" alt="Onion" />
-            <figcaption>Onion</figcaption>
+          <figure class="flex flex-col items-center">
+            <img
+              src="Onion.jpeg"
+              alt="Onion"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Onion
+            </figcaption>
           </figure>
-          <figure>
-            <img src="Nutmeg.jpeg" alt="Nutmeg" />
-            <figcaption>Nutmeg</figcaption>
+          <figure class="flex flex-col items-center">
+            <img
+              src="Nutmeg.jpeg"
+              alt="Nutmeg"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Nutmeg
+            </figcaption>
           </figure>
-          <figure>
-            <img src="Smallsea.jpeg" alt="Seasoning" />
-            <figcaption>Seasoning</figcaption>
+          <figure class="flex flex-col items-center">
+            <img
+              src="Smallsea.jpeg"
+              alt="Seasoning"
+              class="w-24 h-24 object-cover rounded-md shadow-md"
+            />
+            <figcaption class="mt-2 text-red-800 font-semibold">
+              Seasoning
+            </figcaption>
           </figure>
         </div>
-        <button class="close">CLOSE</button>
       </section>
-      <div class="blck2">
-        <section class="about">
-          <p>
-            A Taste of Passion, <span style="color: red">Decency</span> is the
-            Only Spice You’ll Ever Need Imagine a world where every meal tells a
-            story. A story of vibrant flavors, rich aromas, and unforgettable
-            moments shared around the table. That’s the world we’ve created with
-            <span style="color: red">Decency</span> a world where cooking
-            becomes an art, and every bite is a masterpiece.
-          </p>
-          <p>
-            Start your journey today. Contact us at our mobile numbers, Whatsapp
-            or X account. We make deliveries all over Nigeria.
-          </p>
-          <p><button class="abtclose">CLOSE</button></p>
-        </section>
-      </div>
-      <section class="cont">
-        <h2>Address</h2>
-        <p>
-          <address>
-            B29/22 Ogbaru Main Market <br />
-            Ogbaru LGA, Onitsha <br />
-            Anambra State, Nigeria
-          </address>
-        </p>
-        <h2>Contact</h2>
-        <p>Phone:</p>
-        <p>+234 806 323 7897</p>
-        <p>+234 703 223 1540</p>
-        <p>Socials</p>
-          <p>
-            <a
-              href="https://twitter.com/onyeka01"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-twitter" style="font-size: 30px"></i>
-            </a>
 
-            <a
-              href="https://wa.me/2348063237897"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-whatsapp" style="font-size: 30px"></i>
-            </a>
+      <div
+        class="absolute z-10 bg-cover bg-center w-full min-h-screen hidden"
+        id="about-section"
+        style="background-image: url('BG2.jpeg')"
+      >
+        <section
+          class="bg-black/70 text-yellow-400 text-2xl md:text-4xl p-8 space-y-6 relative h-full"
+        >
+          <!-- Close Button -->
+          <button
+            id="about-close"
+            class="absolute top-4 right-4 text-white hover:text-yellow-400 text-xl"
+          >
+            <i class="fas fa-xmark fa-2x"></i>
+          </button>
+
+          <p>
+            A Taste of Passion,
+            <span class="text-red-600 font-semibold">Decency</span> is the Only
+            Spice You’ll Ever Need. Imagine a world where every meal tells a
+            story — of vibrant flavors, rich aromas, and unforgettable moments
+            shared around the table. That’s the world we’ve created with
+            <span class="text-red-600 font-semibold">Decency</span> — a world
+            where cooking becomes an art, and every bite is a masterpiece.
           </p>
-          <button class="contclose">Close</button>
-      </section>
-      <div class="blck">
-        <h2 class="drpdown">welcome!</h2>
-        <section class="imgsec">
-          <h1>Taste The Difference With Decency</h1>
+          <p>
+            Start your journey today. Contact us via our mobile numbers,
+            WhatsApp, or X (Twitter). We make deliveries all over Nigeria.
+          </p>
         </section>
       </div>
-      <section class="container1">
-        <div class="text">
+      <div class="relative bg-[url('BG.jpg')] bg-cover">
+        <h2
+          class="absolute bg-[var(--YELW-COLOR)] text-[var(--RED-COLOR)] w-auto m-2 animate-[dropDown_0.5s_ease-in-out_1s]"
+        >
+          welcome!
+        </h2>
+        <section class="flex items-center h-[400px] w-auto bg-black/45">
+          <h1 class="text-[600%] text-center text-[var(--GRN-COLOR)]">
+            Taste The Difference With Decency
+          </h1>
+        </section>
+      </div>
+
+      <section class="flex flex-col md:flex-row justify-evenly p-8">
+        <div
+          class="h-auto md:w-1/2 md:text-3xl md:pl-4 text-[var(--GRN-COLOR)]"
+        >
           <p>
             Cooking isn’t just about making food it’s about creating
-            <span style="color: red">moments.</span> At Decency, we believe
+            <span class="text-red-600">moments.</span> At Decency, we believe
             every meal deserves the perfect touch of flavor to bring it to life.
           </p>
           <p>
             It’s more than seasoning it’s the secret to meals that leave your
-            loved ones saying, <span style="color: red">“Wow!”</span>
+            loved ones saying, <span class="text-red-600">“Wow!”</span>
           </p>
         </div>
-        <div class="foodimg">
-          <img src="food.jpg" alt="Food" />
+        <div class="mx-auto mt-4 animate-fadeIn">
+          <img
+            src="food.jpg"
+            alt="Food"
+            class="rounded-[10px] h-[300px] w-auto shadow-[5px_5px_15px_#000]"
+          />
         </div>
       </section>
-      <div class="container2">
-        <div class="scroller">
-          <img src="Shallot.jpeg" alt="Shallot-image" />
-          <img src="Bayleaf.jpeg" alt="Bayleaf-image" />
-          <img src="Chick-sea.jpeg" alt="Chicken seasoning-image" />
-          <img src="Onion.jpeg" alt="Onion-image" />
-          <img src="Nutmeg.jpeg" alt="Nutmeg-image" />
-          <img src="Smallsea.jpeg" alt="Seasoning-image" />
-          <img src="Baysmall.jpeg" alt="Small-Bayleaf-image">
-          <img src="Added.jpeg" alt="Seasoning-image">
-          <img src="Shallot.jpeg" alt="Shallot-image" />
-          <img src="Bayleaf.jpeg" alt="Bayleaf-image" />
-          <img src="Chick-sea.jpeg" alt="Chicken seasoning-image" />
-          <img src="Onion.jpeg" alt="Onion-image" />
-          <img src="Nutmeg.jpeg" alt="Nutmeg-image" />
-          <img src="Smallsea.jpeg" alt="Seasoning-image" />
-          <img src="Baysmall.jpeg" alt="Small-Bayleaf-image">
-          <img src="Added.jpeg" alt="Seasoning-image">
+
+      <div
+        class="relative flex overflow-hidden w-full [mask-image:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)] [--webkit-mask-image:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]"
+      >
+        <div class="flex flex-nowrap gap-4 w-max scroller">
+          <img src="Shallot.jpeg" alt="Shallot-image" class="w-1/4 h-auto" />
+          <img src="Bayleaf.jpeg" alt="Bayleaf-image" class="w-1/4 h-auto" />
+          <img
+            src="Chick-sea.jpeg"
+            alt="Chicken seasoning-image"
+            class="w-1/4 h-auto"
+          />
+          <img src="Onion.jpeg" alt="Onion-image" class="w-1/4 h-auto" />
+          <img src="Nutmeg.jpeg" alt="Nutmeg-image" class="w-1/4 h-auto" />
+          <img src="Smallsea.jpeg" alt="Seasoning-image" class="w-1/4 h-auto" />
+          <img
+            src="Baysmall.jpeg"
+            alt="Small-Bayleaf-image"
+            class="w-1/4 h-auto"
+          />
+          <img src="Added.jpeg" alt="Seasoning-image" class="w-1/4 h-auto" />
+          <img src="Shallot.jpeg" alt="Shallot-image" class="w-1/4 h-auto" />
+          <img src="Bayleaf.jpeg" alt="Bayleaf-image" class="w-1/4 h-auto" />
+          <img
+            src="Chick-sea.jpeg"
+            alt="Chicken seasoning-image"
+            class="w-1/4 h-auto"
+          />
+          <img src="Onion.jpeg" alt="Onion-image" class="w-1/4 h-auto" />
+          <img src="Nutmeg.jpeg" alt="Nutmeg-image" class="w-1/4 h-auto" />
+          <img src="Smallsea.jpeg" alt="Seasoning-image" class="w-1/4 h-auto" />
+          <img
+            src="Baysmall.jpeg"
+            alt="Small-Bayleaf-image"
+            class="w-1/4 h-auto"
+          />
+          <img src="Added.jpeg" alt="Seasoning-image" class="w-1/4 h-auto" />
         </div>
       </div>
-      <p class="main">
+
+      <p
+        class="text-[var(--GRN-COLOR)] text-4xl text-center px-[12rem] py-[5rem]"
+      >
         Are you tired of bland, uninspiring meals? Whether you're a busy parent,
         a passionate home cook, or someone just looking to add more flavor to
-        life, our <span style="color: red">Decency</span> Seasonings are here to
-        make every bite unforgettable!
+        life, our <span class="text-red-600">Decency</span> Seasonings are here
+        to make every bite unforgettable!
       </p>
-      <div class="button">
-        <button class="products"><a href="#">view Products</a></button>
-        <button class="aboutt"><a href="#">About Decency</a></button>
-      </div>
-      <button class="pop-up">View Prices</button>
-      <section class="prices">
+
+      <section class="prices hidden">
         <figure>
-          <img src="Baysmall.jpeg" alt="Small-Bayleaf-image">
+          <img src="Baysmall.jpeg" alt="Small-Bayleaf-image" />
           <figcaption>N625</figcaption>
         </figure>
         <figure>
-          <img src="Bayleaf.jpeg" alt="Bayleaf-image">
+          <img src="Bayleaf.jpeg" alt="Bayleaf-image" />
           <figcaption>N1,250</figcaption>
         </figure>
         <figure>
-          <img src="Onion.jpeg" alt="Onion-image">
+          <img src="Onion.jpeg" alt="Onion-image" />
           <figcaption>N1,600</figcaption>
         </figure>
         <figure>
-          <img src="Shallot.jpeg" alt="Shallot-image">
+          <img src="Shallot.jpeg" alt="Shallot-image" />
           <figcaption>N1,500</figcaption>
         </figure>
         <figure>
-          <img src="Chick-sea.jpeg" alt="Chicken seasoning-image">
+          <img src="Chick-sea.jpeg" alt="Chicken seasoning-image" />
           <figcaption>N500</figcaption>
         </figure>
         <figure>
-          <img src="Smallsea.jpeg" alt="Seasoning-image">
+          <img src="Smallsea.jpeg" alt="Seasoning-image" />
           <figcaption>N600</figcaption>
         </figure>
         <figure>
-          <img src="Nutmeg.jpeg" alt="Nutmeg-image">
+          <img src="Nutmeg.jpeg" alt="Nutmeg-image" />
           <figcaption>N6,000</figcaption>
         </figure>
         <button class="priceclose">CLOSE</button>
       </section>
     </main>
-    <footer>
-      <div class="ftupper">
-        <img src="Logo.jpeg" alt="Logo-image" height="130" height="auto" />
-        <div class="adress">
-          <h2>Where to find us</h2>
-          <p>Address:</p>
-          <address>
-            B29/22 Ogbaru Main Market <br />
-            Ogbaru LGA, Onitsha <br />
+    <footer
+      class="flex flex-col p-8 border-t border-red-800 text-red-800 bg-gray-700 text-white"
+    >
+      <!-- Upper Section -->
+      <div
+        class="flex flex-col md:flex-row md:justify-between md:items-start gap-8 mb-6"
+      >
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <img src="Logo.jpeg" alt="Logo image" class="h-32 w-auto" />
+        </div>
+
+        <!-- Address Section -->
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Where to find us</h2>
+          <p class="text-sm font-medium">Address:</p>
+          <address class="not-italic text-sm leading-relaxed">
+            B29/22 Ogbaru Main Market<br />
+            Ogbaru LGA, Onitsha<br />
             Anambra State, Nigeria
           </address>
         </div>
-        <div class="contact">
-          <h2>Contact</h2>
-          <p>Phone:</p>
-          <p>+234 806 323 7897</p>
-          <p>+234 703 223 1540</p>
-          <p>Socials</p>
-          <p>
+
+        <!-- Contact Section -->
+        <div id="contact">
+          <h2 class="text-xl font-semibold mb-2">Contact</h2>
+          <p class="text-sm font-medium">Phone:</p>
+          <p class="text-sm">+234 806 323 7897</p>
+          <p class="text-sm mb-2">+234 703 223 1540</p>
+          <p class="text-sm font-medium">Socials</p>
+          <div class="flex items-center gap-3 mt-2 text-2xl">
             <a
               href="https://wa.me/+2348063237897"
               target="_blank"
-              class="text-green-500 text-2xl hover:text-green-700"
+              class="text-red-600 hover:text-yellow-400"
             >
-              <i class="fa-brands fa-whatsapp" style="font-size: 25px"></i>
+              <i class="fa-brands fa-whatsapp"></i>
             </a>
             <a
               href="https://www.instagram.com/decencyspices"
               target="_blank"
-              class="text-pink-500 text-2xl hover:text-pink-700"
+              class="text-red-600 hover:text-yellow-400"
             >
-              <i class="fa-brands fa-instagram" style="font-size: 25px"></i>
+              <i class="fa-brands fa-instagram"></i>
             </a>
             <a
               href="https://www.facebook.com/decencyspice"
               target="_blank"
-              class="text-blue-500 text-2xl hover:text-blue-700"
+              class="text-red-600 hover:text-yellow-400"
             >
-              <i class="fa-brands fa-facebook" style="font-size: 25px"></i>
+              <i class="fa-brands fa-facebook"></i>
             </a>
             <a
               href="https://twitter.com/Decency_Spices"
               target="_blank"
-              class="text-gray-900 text-2xl hover:text-gray-700"
+              class="text-red-600 hover:text-yellow-400"
             >
-              <i class="fa-brands fa-x-twitter" style="font-size: 25px"></i>
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
-          </p>
+          </div>
         </div>
       </div>
-      <div class="ftlower">Copyright: &copy;2025 Decency Spices</div>
+
+      <!-- Lower Section -->
+      <div class="text-center text-sm mt-4">
+        &copy; 2025 Decency Spices. All rights reserved.
+      </div>
     </footer>
   </body>
 </html>
