@@ -20,7 +20,7 @@
   const closePrd = document.getElementById('prod-close');
   
 
-  // Handle all buttons that open product section
+  // OPEN PRODUCTS
   document.querySelectorAll('.product-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -33,6 +33,7 @@
   // Close product section
   closePrd?.addEventListener('click', () => {
     prodSection.classList.add('hidden');
+    closeBtn.classList.add('hidden')
   });
 
   //ABOUT US 
