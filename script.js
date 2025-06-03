@@ -42,14 +42,15 @@
   const openAbout = document.getElementById('about-open');
   const closeAbout = document.getElementById('about-close');
 
-  openAbout.addEventListener('click', () => {
+ document.querySelectorAll('.about-open').forEach(button => {
+  button.addEventListener('click', () => {
     aboutSection.classList.remove('hidden');
+    sidebar.classList.add('hidden');
+    closeBtn.classList.add('hidden');
+    menuBtn.classList.remove('hidden');
   });
+});
 
-  closeAbout.addEventListener('click', () => {
-    aboutSection.classList.add('hidden');
-  });
-
-  openAbout.addEventListener('click', () => {
-    sidebar.classList.add('hidden')
-  });
+closeAbout.addEventListener('click', () => {
+  aboutSection.classList.add('hidden');
+})
