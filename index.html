@@ -17,7 +17,6 @@
     <script src="script.js" defer></script>
   </head>
   <body class="italic">
-    <!-- HEADER -->
     <header
       class="flex justify-between items-center w-full h-16 sticky top-0 z-50 bg-white border-b border-red-800 px-4"
     >
@@ -27,12 +26,17 @@
       <!-- Desktop Nav -->
       <ul class="hidden md:flex space-x-6">
         <li>
-          <a href="#" class="product-btn text-red-800 hover:text-yellow-400"
+          <a
+            href="#"
+            class="product-btn text-red-800 hover:cusor-pointer hover:text-yellow-400"
             >Our Products</a
           >
         </li>
         <li>
-          <a href="#" id="about-open" class="text-red-800 hover:text-yellow-400"
+          <a
+            href="#"
+            id="about-open"
+            class="text-red-800 hover:cursor-pointer hover:text-yellow-400"
             >About</a
           >
         </li>
@@ -83,17 +87,20 @@
       <!-- MOBILE SIDEBAR -->
       <ul
         id="sidebar"
-        class="fixed top-0 left-0 w-2/3 h-full bg-white border-r border-red-800 p-6 flex-col gap-6 text-left hidden z-40"
+        class="fixed top-0 left-0 w-2/3 h-full bg-green-200/60 backdrop-blur-md border-r border-red-800 p-6 flex-col items-center justify-center gap-6 text-left hidden z-40"
       >
-        <li class="product-btn text-red-800 hover:text-yellow-400 py-2">
+        <li class="product-btn text-red-800 hover:text-yellow-400 mt-10 py-2">
           Our Products
         </li>
+        <hr class="w-1/2 border-t border-red-800 my-2" />
         <li id="about-open" class="text-red-800 hover:text-yellow-400 py-2">
           About
         </li>
+        <hr class="w-1/2 border-t border-red-800 my-2" />
         <a href="#contact"
           ><li class="text-red-800 hover:text-yellow-400 py-2">Contact</li></a
         >
+        <hr class="w-1/2 border-t border-red-800 my-2" />
         <div class="flex gap-4 pt-4">
           <a
             href="https://wa.me/+2348063237897"
